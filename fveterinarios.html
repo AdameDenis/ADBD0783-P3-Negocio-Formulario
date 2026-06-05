@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario Veterinarios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+    
+    <style>
+        body { 
+            font-family: "Poppins", sans-serif; 
+            background-color: #f4f7f4; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .logo-header { 
+            max-height: 70px; 
+            width: auto; 
+            transition: transform 0.3s;
+        }
+
+        .logo-header:hover {
+            transform: scale(1.1);
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px 20px;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row; /* Alinea los hijos lado a lado */
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .form-container {
+            width: 30%;          
+            min-width: 320px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 6px solid #8bc34a; 
+        }
+
+        .table-container {
+            width: 70%;
+            overflow-x: auto;
+            background: white;
+            border-radius: 12px;
+            border-top: 6px solid #8bc34a;
+        }
+
+        /* Responsive: Se apilan solo en pantallas móviles o tablets angostas */
+        @media (max-width: 850px) {
+            .content-container {
+                flex-direction: column;
+            }
+            .form-container, .table-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="w3-container w3-light-green w3-padding-24 w3-card-2">
+    <div class="w3-row-padding header-flex">
+        <div class="w3-col s2 m2 w3-left-align">
+            <img src="logo.jpg" alt="Logo Izquierda" class="w3-image logo-header w3-circle">
+        </div>
+        <div class="w3-col s8 m8 w3-center">
+            <h1 class="w3-xlarge"><b>CLÍNICA VETERINARIA</b></h1>
+            <p class="w3-medium" style="margin-top:-10px;">Cuidado profesional para tus mascotas</p>
+        </div>
+        <div class="w3-col s2 m2 w3-right-align">
+            <img src="logo.jpg" alt="Logo Derecha" class="w3-image logo-header w3-circle">
+        </div>
+    </div>
+</header>
+
+<nav class="w3-bar w3-black w3-card">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Inicio</a>
+    <a href="fveterinarios.html" class="w3-bar-item w3-button w3-mobile w3-green">Veterinarios</a>
+    <a href="fpropietarios.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Propietarios</a>
+    <a href="fmascotas.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Mascotas</a>
+    <a href="fhistorial.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Historial Clínico</a>
+    <a href="festudios.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Estudios</a>
+</nav>
+
+<main class="w3-container">
+    <div class="w3-margin-bottom">
+        <h2 class="w3-text-dark-grey"><b>Formulario Veterinarios</b></h2>
+        <p class="w3-text-grey">Rellene los datos solicitados para darle de alta en el sistema.</p>
+    </div>
+
+    <div class="content-container">
+        
+        <form class="form-container w3-card-4" action="#" method="POST">
+             <p>
+                <label class="w3-text-grey"><b>ID del Veterinario:</b></label>
+                <input class="w3-input w3-border w3-round" type="number" name="id_veterinario" placeholder="Ej: 10" required>
+            </p>
+           
+            <p>
+                <label class="w3-text-grey"><b>Nombre:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="nombre" placeholder="Ej: Perla Valles" required>
+            </p>
+           
+            <p>
+                <label class="w3-text-grey"><b>Cédula Profesional:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="cedula" placeholder="Ej: 1234567" required>
+            </p>
+           
+            <p>
+                <label class="w3-text-grey"><b>Especialidad:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="especialidad" placeholder="Ej: Imagenología" required>
+            </p>
+           
+            <p>
+                <label class="w3-text-grey"><b>Consultorio:</b></label>
+                <input class="w3-input w3-border w3-round" type="number" name="consultorio" placeholder="Ej: 1" required>
+            </p>
+       
+            <p>
+                <label class="w3-text-grey"><b>Disponibilidad:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="disponibilidad" placeholder="Ej: Lunes-Viernes" required>
+            </p>
+
+            <p>
+                <label class="w3-text-grey"><b>Horario:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="horario" placeholder="Ej: 8:00a.m.-1:00p.m." required>
+            </p>
+
+            <p>
+                <label class="w3-text-grey"><b>Teléfono:</b></label>
+                <input class="w3-input w3-border w3-round" type="number" name="telefono" placeholder="Ej: 555 555" required>
+            </p>
+
+            <p class="w3-padding-16">
+                <button type="submit" class="w3-button w3-block w3-green w3-round w3-hover-light-green w3-text-white"><b>Dar de alta al Veterinario</b></button>
+            </p>
+        </form> <div class="table-container w3-card-4">
+            <table class="w3-table-all w3-hoverable">
+                <thead>
+                  <tr class="w3-light-green">      
+                    <th>ID Veterinario</th>      
+                    <th>Nombre</th>      
+                    <th>Cédula Profesional</th>      
+                    <th>Especialidad</th>      
+                    <th>Consultorio</th>      
+                    <th>Disponibilidad</th>      
+                    <th>Horario</th>      
+                    <th>Teléfono</th>      
+                   </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="8" class="w3-center w3-text-grey">No hay veterinarios registrados actualmente</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div> </main>
+
+<footer class="w3-container w3-green w3-padding-16 w3-center w3-margin-top">
+    <p><b>Adame Durán Brenda Denis</b> | 0783 4°J Programación</p>
+    <p class="w3-small">© 2026 Veterinaria Para Todos</p>
+</footer>
+
+</body>
+</html>

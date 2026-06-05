@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario Propietarios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+    
+    <style>
+        body { 
+            font-family: "Poppins", sans-serif; 
+            background-color: #f4f7f4; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .logo-header { 
+            max-height: 70px; 
+            width: auto; 
+            transition: transform 0.3s;
+        }
+
+        .logo-header:hover {
+            transform: scale(1.1);
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px 20px;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .form-container {
+            width: 30%;          
+            min-width: 320px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-top: 6px solid #4CAF50; 
+        }
+
+        .table-container {
+            width: 70%;
+            overflow-x: auto;
+            background: white;
+            border-radius: 12px;
+            border-top: 6px solid #4CAF50;
+        }
+
+        .titulo-tabla {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        @media (max-width: 992px) {
+            .content-container {
+                flex-direction: column;
+            }
+            .form-container, .table-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="w3-container w3-light-green w3-padding-24 w3-card-2">
+    <div class="w3-row-padding header-flex">
+        <div class="w3-col s2 m2 w3-left-align">
+            <img src="logo.jpg" alt="Logo Izquierda" class="w3-image logo-header w3-circle">
+        </div>
+        <div class="w3-col s8 m8 w3-center">
+            <h1 class="w3-xlarge"><b>CLÍNICA VETERINARIA</b></h1>
+            <p class="w3-medium" style="margin-top:-10px;">Cuidado profesional para tus mascotas</p>
+        </div>
+        <div class="w3-col s2 m2 w3-right-align">
+            <img src="logo.jpg" alt="Logo Derecha" class="w3-image logo-header w3-circle">
+        </div>
+    </div>
+</header>
+
+<nav class="w3-bar w3-black w3-card">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Inicio</a>
+    <a href="fveterinarios.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Veterinarios</a>
+    <a href="fpropietarios.html" class="w3-bar-item w3-button w3-mobile w3-green">Propietarios</a>
+    <a href="fmascotas.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Mascotas</a>
+    <a href="fhistorial.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Historial Clínico</a>
+    <a href="festudios.html" class="w3-bar-item w3-button w3-mobile w3-hover-green">Estudios</a>
+</nav>
+
+<main class="w3-container">
+    <div class="w3-margin-bottom">
+        <h2 class="w3-text-dark-grey"><b>Formulario Propietarios</b></h2>
+        <p class="w3-text-grey">Rellene los datos solicitados para registrar al dueño de la mascota.</p>
+    </div>
+
+    <div class="content-container">
+        
+        <form class="form-container w3-card-4" action="#" method="POST">
+             <p>
+                <label class="w3-text-grey"><b>ID del Propietario:</b></label>
+                <input class="w3-input w3-border w3-round" type="number" name="id_propietario" placeholder="Ej: 101" required>
+            </p>
+           
+            <p>
+                <label class="w3-text-grey"><b>Nombre:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="nombre" placeholder="Ej: Pancho Villa" required>
+            </p>
+           
+            <p>
+                <label class="w3-text-grey"><b>Mascota (ID y Nombre):</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="mascota" placeholder="Ej: 0001 (Paco)" required>
+            </p>
+           
+            <p>
+                <label class="w3-text-grey"><b>Dirección:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="direccion" placeholder="Ej: Calle 13 #1845" required>
+            </p>
+           
+            <p>
+                <label class="w3-text-grey"><b>Teléfono:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="telefono" placeholder="Ej: 555-111-1111" required>
+            </p>
+       
+            <p>
+                <label class="w3-text-grey"><b>Tel. Emergencia:</b></label>
+                <input class="w3-input w3-border w3-round" type="text" name="tel_emergencia" placeholder="Ej: 555-656-8432" required>
+            </p>
+
+            <p>
+                <label class="w3-text-grey"><b>Correo Electrónico:</b></label>
+                <input class="w3-input w3-border w3-round" type="email" name="correo" placeholder="Ej: panchito19@gmail.com" required>
+            </p>
+
+            <p class="w3-padding-16">
+                <button type="submit" class="w3-button w3-block w3-green w3-round w3-hover-light-green w3-text-white"><b>Dar de alta al Propietario</b></button>
+            </p>
+        </form>
+
+        <div class="table-container w3-card-4">
+            <div class="titulo-tabla">REGISTRO DE PROPIETARIOS</div>
+            <table class="w3-table-all w3-hoverable">
+                <thead>
+                  <tr class="w3-dark-grey w3-text-white">      
+                    <th>ID</th>      
+                    <th>Nombre</th>      
+                    <th>Mascota</th>      
+                    <th>Dirección</th>      
+                    <th>Teléfono</th>      
+                    <th>Tel. Emergencia</th>      
+                    <th>Correo Electrónico</th>      
+                   </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="8" class="w3-center w3-text-grey">No hay veterinarios registrados actualmente</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="w3-container w3-green w3-padding-16 w3-center w3-margin-top">
+    <p><b>Adame Durán Brenda Denis</b> | 0783 4°J Programación</p>
+    <p class="w3-small">© 2026 Veterinaria Para Todos</p>
+</footer>
+
+</body>
+</html>
